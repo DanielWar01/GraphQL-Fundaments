@@ -8,9 +8,12 @@ const {books} = require('./resources/books.json')
 
 const schema = buildSchema(`
     type Query{
-        books(): [Book]
+        books: [Book]
         book(id:Int!): Book
-    },
+    }
+    type Mutation{
+        updateBook(id: Int!, title: String!, author: String!, numPages: Int!, year: Int!): Book
+    }
     type Book{
         id: Int,
         title: String,
@@ -20,6 +23,19 @@ const schema = buildSchema(`
     }
 `);
 
+let updateBook = ({id, title, author, numPages, year}) => {
+
+    books.map(book => {
+        if (book.id == id){
+            book.title = title
+            book.author = author
+            book.numPages = numPages
+            book.year = year
+        }
+        return book
+    });
+    return books.find(book => book.id == id)
+}
 
 let bookById = (args) => {
     if (args.id){
@@ -29,8 +45,8 @@ let bookById = (args) => {
 }
 const root = {
     books: () => books,
-    book: bookById
-    
+    book: bookById,
+    updateBook: updateBook
 };
 
 const app = express();
