@@ -1,0 +1,74 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "Game of Thrones",
+        "author": "George R.R. Martin",
+        "numPages": 856,
+        "year": 1996
+      },
+      {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "numPages": 324,
+        "year": 1960
+      },
+      {
+        "id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "numPages": 328,
+        "year": 1949
+      },
+      {
+        "id": 4,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "numPages": 279,
+        "year": 1813
+      },
+      {
+        "id": 5,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "numPages": 310,
+        "year": 1937
+      },
+      {
+        "id": 6,
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "numPages": 635,
+        "year": 1851
+      },
+      {
+        "id": 7,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "numPages": 1225,
+        "year": 1869
+      },
+      {
+        "id": 8,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "numPages": 277,
+        "year": 1951
+      },
+      {
+        "id": 9,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "numPages": 180,
+        "year": 1925
+      },
+      {
+        "id": 10,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "numPages": 430,
+        "year": 1866
+      }
+    ]
+}  

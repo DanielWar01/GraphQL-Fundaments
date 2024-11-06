@@ -2,14 +2,35 @@ const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
 
+const {books} = require('./resources/books.json')
+
+
+
 const schema = buildSchema(`
     type Query{
-        message: String
+        books(): [Book]
+        book(id:Int!): Book
+    },
+    type Book{
+        id: Int,
+        title: String,
+        author: String,
+        numPages: Int,
+        year: Int
     }
 `);
 
+
+let bookById = (args) => {
+    if (args.id){
+        return books.find(book => book.id == args.id)
+    }
+    return null;
+}
 const root = {
-    message: () => "Hello World!"
+    books: () => books,
+    book: bookById
+    
 };
 
 const app = express();
